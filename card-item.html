@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOMAZING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="modal fade" tabindex="-1" aria-hidden="true" id="staticBackdrop">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&#10005;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form" id="form">
+                        <h3 class="form__title">Заказать обратный звонок</h3>
+                        <input type="text" class="form__input" name="name" placeholder="Имя" required>
+                        <input type="email" class="form__input" name="email" placeholder="E-mail" required>
+                        <input type="tel" class="form__input" name="phone" placeholder="Телефон" required>
+                        <button type="button" class="modal-footer__btn wo-btn" data-submit>Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="message" class="modal fade message-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content message-modal-content">
+                <div class="modal-body message-modal-body">
+                    <h3 class="message__text">
+                        Отлично! Мы скоро вам перезвоним.
+                    </h3>
+                    <button type="button" class="message__btn" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand header-logo" href="index.html"><img src="images/logo.svg" alt="logotype"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <img src="images/burger_icon.png" alt="">
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="index.html">Главная</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="shop.html">Магазин</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">О бренде</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                                <div class="header-info">
+                                    <button type="button" class="header-phone" data-toggle="modal" data-target="#staticBackdrop">
+                                        +7 (495) 823-54-12
+                                    </button>
+                                    <a href="#" class="cart"></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="item-title">
+                            Свитшот Sweet Shot
+                        </h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                                <li class="breadcrumb-item"><a href="#">Свитшоты</a></li>
+                                <li class="breadcrumb-item active"><a href="#">Свитшот Sweet Shot</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="card-item" id="card-item">
+        <div class="container">
+            <div class="row">
+                <div class="col col-sm-12 text-center col-md-6">
+                    <div class="card-img">
+                        <a href="#">
+                            <div class="cards-items single">
+                                <img class="crads-items__img single" src="images/shot.png" alt="shot">
+                                <div class="cards-overlay single"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col col-sm-12 text-center col-md-6">
+                    <div class="card-price">
+                        <span class="cards-items__span item-price">
+                            $311
+                        </span>
+                        <span class="cards-items__span old item-price">
+                            $450
+                        </span>
+                    </div>
+                    <div class="card-size">
+                        <h4 class="size__title">
+                            Выберите размер
+                        </h4>
+                        <div class="buttons-card-item">
+                            <button class="page-card-btn" type="button">S</button>
+                            <button class="page-card-btn active" type="button">M</button>
+                            <button class="page-card-btn" type="button">L</button>
+                            <button class="page-card-btn" type="button">XL</button>
+                            <button class="page-card-btn" type="button">XXL</button>
+                        </div>
+                    </div>
+                    <div class="card-color">
+                        <h4 class="color__title">
+                            Выберите размер
+                        </h4>
+                        <div class="buttons-color-item">
+                            <button class="page-circle-btn brown" type="button"></button>
+                            <button class="page-circle-btn active grey" type="button"></button>
+                            <button class="page-circle-btn pink" type="button"></button>
+                            <button class="page-circle-btn orange" type="button"></button>
+                        </div>
+                    </div>
+                    <div class="card-buttons">
+                        <button type="button" class="card-small-btn">
+                            1
+                        </button>
+                        <button type="button" class="card-big-btn wo-btn">
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-6 text-center col-md-4">
+                    <a id="" href="#">
+                        <div class="cards-items">
+                            <img class="crads-items__img" src="images/usa.png" alt="usa">
+                            <div class="cards-overlay"></div>
+                        </div>
+                    </a>
+                    <div class="cards-text">
+                        <h4 class="cards-items__title">
+                            Футболка USA
+                        </h4>
+                        <span class="cards-items__span old">
+                            $229
+                        </span>
+                        <span class="cards-items__span">
+                            $229
+                        </span>
+                    </div>
+                </div>
+                <div class="col col-sm-6 text-center col-md-4">
+                    <a href="#">
+                        <div class="cards-items">
+                            <img class="crads-items__img" src="images/glow.png" alt="glow">
+                            <div class="cards-overlay"></div>
+                        </div>
+                    </a>
+                    <div class="cards-text">
+                        <h4 class="cards-items__title">
+                            Купальник Glow
+                        </h4>
+                        <span class="cards-items__span">
+                            $129
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 text-center">
+                    <div class="footer-logo">
+                        <a class="logo" href="index.html"><img src="images/logo.svg" alt="logotype"></a>
+                    </div>
+                    <div class="footer-text__wrapper">
+                        <p class="footer-text text">
+                            © Все права защищены
+                        </p>
+                        <p class="footer-text text">
+                            Политика конфиденциальности
+                        </p>
+                        <p class="footer-text text">
+                            Публичная оферта
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <ul class="footer-list d-flex">
+                        <li class="footer-items">
+                            <a class="footer-items__link active" href="index.html">Главная</a>
+                        </li>
+                        <li class="footer-items">
+                            <a class="footer-items__link" href="shop.html">Магазин</a>
+                        </li>
+                        <li class="footer-items">
+                            <a class="footer-items__link" href="about-brand.html">О бренде</a>
+                        </li>
+                        <li class="footer-items">
+                            <a class="footer-items__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="list-score">
+                        <li class="list-score__items text">
+                            <a class="list-score__link" href="#">Пальто</a>
+                        </li>
+                        <li class="list-score__items text">
+                            <a class="list-score__link " href="#">Свитшоты</a>
+                        </li>
+                        <li class="list-score__items text">
+                            <a class="list-score__link " href="#">Кардиганы</a>
+                        </li>
+                        <li class="list-score__items text">
+                            <a class="list-score__link" href="#">Толстовки</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-12">
+                    <div class="footer-info">
+                        <a href="tel:+74958235412" class="footer-phone">
+                            +7 (495) 823-54-12
+                        </a>
+                        <a href="mailto:hello@womazing.com" class="footer-email">
+                            hello@womazing.com
+                        </a>
+                        <!--noindex-->
+                        <a href="https://www.instagram.com" class="social-link instagram-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                        <!--noindex-->
+                        <a href="https://facebook.com" class="social-link facebook-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                        <!--noindex-->
+                        <a href="https://twitter.com/" class="social-link twitter-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                        <!--noindex-->
+                        <a href="https://www.mastercard.us/" class="social-link visa-mastercard-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/main.js "></script>
+
+
+</body>
+
+</html>

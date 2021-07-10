@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOMAZING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="modal fade" tabindex="-1" aria-hidden="true" id="staticBackdrop">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&#10005;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form" id="form">
+                        <h3 class="form__title">Заказать обратный звонок</h3>
+                        <input type="text" class="form__input" name="name" placeholder="Имя" required>
+                        <input type="email" class="form__input" name="email" placeholder="E-mail" required>
+                        <input type="tel" class="form__input" name="phone" placeholder="Телефон" required>
+                        <button type="button" class="modal-footer__btn wo-btn" data-submit>Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="message" class="modal fade message-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content message-modal-content">
+                <div class="modal-body message-modal-body">
+                    <h3 class="message__text">
+                        Отлично! Мы скоро вам перезвоним.
+                    </h3>
+                    <button type="button" class="message__btn" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="header" id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand header-logo" href="index.html"><img src="images/logo.svg" alt="logotype"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span>
+                                    <img src="images/burger_icon.png" alt="">
+                                </span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="index.html">Главная</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="shop.html">Магазин</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">О бренде</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                                <div class="header-info">
+                                    <button type="button" class="header-phone" data-toggle="modal" data-target="#staticBackdrop">
+                                        +7 (495) 823-54-12
+                                    </button>
+                                    <a href="#" class="cart"></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="shop-title">
+                            Магазин
+                        </h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                                <li class="breadcrumb-item active"><a href="shop.html">Магазин</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="cards" id="cards">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="shop-btn nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">Все</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="shop-btn nav-link" id="pills-сoat-tab" data-toggle="pill" href="#pills-сoat" role="tab" aria-controls="pills-сoat" aria-selected="false">Пальто</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="shop-btn nav-link" id="pills-sweetshot-tab" data-toggle="pill" href="#pills-sweetshot" role="tab" aria-controls="pills-sweetshot" aria-selected="false">Свитшоты</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="shop-btn nav-link" id="pills-cardigans-tab" data-toggle="pill" href="#pills-cardigans" role="tab" aria-controls="pills-cardigans" aria-selected="false">Кардиганы</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="shop-btn nav-link" id="pills-hoody-tab" data-toggle="pill" href="#pills-hoody" role="tab" aria-controls="pills-hoody" aria-selected="false">Толстовки</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="shop-text">Показано: 3 из 12 товаров</span>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+                            <div class="row">
+                                <div class="col col-sm-6 text-center col-md-4">
+                                    <a id="" href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/usa.png" alt="usa">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Футболка USA
+                                        </h4>
+                                        <span class="cards-items__span old">
+                                            $229
+                                        </span>
+                                        <span class="cards-items__span">
+                                            $229
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/glow.png" alt="glow">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Купальник Glow
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-12 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/shot.png" alt="shot">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Свитшот Sweet Shot
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-сoat" role="tabpanel" aria-labelledby="pills-сoat-tab">
+                            <div class="row">
+                                <div class="col col-sm-6 text-center col-md-4">
+                                    <a id="" href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/usa.png" alt="usa">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Футболка USA
+                                        </h4>
+                                        <span class="cards-items__span old">
+                                            $229
+                                        </span>
+                                        <span class="cards-items__span">
+                                            $229
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/glow.png" alt="glow">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Купальник Glow
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-12 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/shot.png" alt="shot">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Свитшот Sweet Shot
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-sweetshot" role="tabpanel" aria-labelledby="pills-sweetshot-tab">
+                            <div class="row">
+                                <div class="col col-sm-12 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/shot.png" alt="shot">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Свитшот Sweet Shot
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-12 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/shot.png" alt="shot">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Свитшот Sweet Shot
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-cardigans" role="tabpanel" aria-labelledby="pills-cardigans-tab">
+                            <div class="row">
+                                <div class="col col-sm-6 text-center col-md-4">
+                                    <a id="" href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/usa.png" alt="usa">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Футболка USA
+                                        </h4>
+                                        <span class="cards-items__span old">
+                                            $229
+                                        </span>
+                                        <span class="cards-items__span">
+                                            $229
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-hoody" role="tabpanel" aria-labelledby="pills-hoody-tab">
+                            <div class="row">
+                                <div class="col col-sm-6 text-center col-md-4">
+                                    <a id="" href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/usa.png" alt="usa">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Футболка USA
+                                        </h4>
+                                        <span class="cards-items__span old">
+                                            $229
+                                        </span>
+                                        <span class="cards-items__span">
+                                            $229
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-12 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/shot.png" alt="shot">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Свитшот Sweet Shot
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-12 text-center col-md-4">
+                                    <a href="#">
+                                        <div class="cards-items">
+                                            <img class="crads-items__img" src="images/shot.png" alt="shot">
+                                            <div class="cards-overlay"></div>
+                                        </div>
+                                    </a>
+                                    <div class="cards-text">
+                                        <h4 class="cards-items__title">
+                                            Свитшот Sweet Shot
+                                        </h4>
+                                        <span class="cards-items__span">
+                                            $129
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="shop-text">Показано: 3 из 12 товаров</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-sm justify-content-center align-items-center">
+                            <li class="page-btn page-item active" aria-current="page">
+                                <span class="page-link">2</span>
+                            </li>
+                            <li class="page-btn page-item"><a class="page-link" href="shop.html">1</a></li>
+                            <li class="page-item">
+                                <a class="page-link arrow" href="shop.html">
+                                    <img src="images/shop-arrow.png" alt="shop-arrow">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 text-center">
+                    <div class="footer-logo">
+                        <a class="logo" href="index.html"><img src="images/logo.svg" alt="logotype"></a>
+                    </div>
+                    <div class="footer-text__wrapper">
+                        <p class="footer-text text">
+                            © Все права защищены
+                        </p>
+                        <p class="footer-text text">
+                            Политика конфиденциальности
+                        </p>
+                        <p class="footer-text text">
+                            Публичная оферта
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <ul class="footer-list d-flex">
+                        <li class="footer-items">
+                            <a class="footer-items__link active" href="index.html">Главная</a>
+                        </li>
+                        <li class="footer-items">
+                            <a class="footer-items__link" href="shop.html">Магазин</a>
+                        </li>
+                        <li class="footer-items">
+                            <a class="footer-items__link" href="#">О бренде</a>
+                        </li>
+                        <li class="footer-items">
+                            <a class="footer-items__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="list-score">
+                        <li class="list-score__items text">
+                            <a class="list-score__link" href="#">Пальто</a>
+                        </li>
+                        <li class="list-score__items text">
+                            <a class="list-score__link " href="#">Свитшоты</a>
+                        </li>
+                        <li class="list-score__items text">
+                            <a class="list-score__link " href="#">Кардиганы</a>
+                        </li>
+                        <li class="list-score__items text">
+                            <a class="list-score__link" href="#">Толстовки</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-12">
+                    <div class="footer-info">
+                        <a href="tel:+74958235412" class="footer-phone">
+                            +7 (495) 823-54-12
+                        </a>
+                        <a href="mailto:hello@womazing.com" class="footer-email">
+                            hello@womazing.com
+                        </a>
+                        <!--noindex-->
+                        <a href="https://www.instagram.com" class="social-link instagram-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                        <!--noindex-->
+                        <a href="https://facebook.com" class="social-link facebook-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                        <!--noindex-->
+                        <a href="https://twitter.com/" class="social-link twitter-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                        <!--noindex-->
+                        <a href="https://www.mastercard.us/" class="social-link visa-mastercard-link" target="_blank" rel="nofollow noopener noreferrer"></a>
+                        <!--/noindex-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/slick.min.js "></script>
+    <script src="js/main.js "></script>
+
+</body>
+
+</html>
